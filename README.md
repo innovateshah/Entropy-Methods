@@ -10,8 +10,7 @@ $$
 $$
 
 $$
-Z = g(X_1,X_2,\ldots,X_n),
-\qquad X_i \text{ are indepenet}
+Z = g(X_1,X_2,\dots,X_n), \quad X_i \text{ are indepenet}
 $$
 
 $$
