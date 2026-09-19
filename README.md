@@ -3,10 +3,10 @@ Research in Randomized Algorithms
 
 
 $$
-\operatorname{Ent}[f]
+\text{Ent}[f]
 = \mathbb{E}[f\log f]
 - \mathbb{E}[f]\log\mathbb{E}[f]
-\leq \int |\operatorname{Gradient} f|^2
+\leq \int |\text{Gradient} f|^2
 $$
 
 $$
