@@ -3,10 +3,9 @@ Research in Randomized Algorithms
 
 
 ```math
-\begin{aligned}\text{Ent}[f]
-= \mathbb{E}[f\log f]
-- \mathbb{E}[f]\log\mathbb{E}[f]
-\leq \int |\text{Gradient} f|^2
+\begin{aligned}
+\text{Ent}[f] = \mathbb{E}[f\log f] - \mathbb{E}[f]\log\mathbb{E}[f]
+\end{aligned}
 ```
 
 $$
