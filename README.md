@@ -2,12 +2,12 @@
 Research in Randomized Algorithms
 
 
-$$
-\text{Ent}[f]
+```math
+\begin{aligned}\text{Ent}[f]
 = \mathbb{E}[f\log f]
 - \mathbb{E}[f]\log\mathbb{E}[f]
 \leq \int |\text{Gradient} f|^2
-$$
+```
 
 $$
 Z = g(X_1,X_2,\dots,X_n), \quad X_i \text{ are indepenet}
