@@ -2,35 +2,42 @@
 Research in Randomized Algorithms
 
 
+### First some definitions
+We assume $X_i$ is a sequence of independent random variables (not necessarily identical).
+
 ```math
 \begin{aligned}
-\text{Ent}[f] = \mathbb{E}[f\log f] - \mathbb{E}[f]\log\mathbb{E}[f]
+Z = g(X_1...X_n)
+\text{Ent}[Y] = \mathbb{E}[Y \log Y] - \mathbb{E}[Y]\log\mathbb{E}[Y]
 \end{aligned}
 ```
-
-```math
-Z = g(X_1,X_2,\dots,X_n), \quad X_i \text{ are indepenet}
-```
-
 ```math
 E_i[Z]
 = \mathbb{E}\left[Z \mid \text{fix all } X_j,\ j\neq i\right]
 ```
-
+Then we note a useful idea called the Tensorization of Entropy which can be derived from Han's Inequality (of relative entropy).
 ```math
 \text{Ent}[Z]
 < \sum_i \mathbb{E}\left[\text{Ent}_i[Z]\right]
 ```
 
 ### Goal
-
+Our the goal (more or less) is to show a modified log-Sobolev inequality,
+```math
+\text{Ent}[f]
+< K | \nabla  f |^2
+```
+But in our case/use will look like this (at least for the easy to evaluate case)
 ```math
 \text{Ent}[e^{sZ}]
 < K s^2 \mathbb{E}[e^{sZ}]
 ```
+There exists
 
-Assume that the inequality holds.
+### Why a log-Sobolev-like bound?
 
+Assume that the log-Sobolev-type inequality holds.
+We define,
 ```math
 F(s)=\mathbb{E}[e^{sZ}]
 ```
@@ -38,23 +45,19 @@ F(s)=\mathbb{E}[e^{sZ}]
 ```math
 \begin{aligned}
 \text{Ent}[e^{sZ}]
-&=sF'(s)-F\log F \\
-&< Ks^2F(s)
+&=sF'(s) - F \log F < Ks^2F(s)
 \end{aligned}
 ```
-
+Re arranging yeilds
 ```math
-\frac{1}{s}\frac{F'}{F}
+\frac{d}{ds}\left(\frac{\log F}{s}\right)
+= \frac{1}{s}\frac{F'}{F}
 +\left(-\frac{1}{s^2}\right)\log F
-<K
+< K
 ```
-
+Integrating,
 ```math
-\frac{d}{ds}\left(\frac{\log F}{s}\right)<K
-```
-
-```math
-\frac{\log F}{s}<Ks+\mathbb{E}Z=Ks,
+\frac{\log F}{s} < Ks+\mathbb{E}Z=Ks,
 \qquad
 \text{by shifting } Z \text{ by the mean of } Z.
 ```
@@ -62,24 +65,26 @@ F(s)=\mathbb{E}[e^{sZ}]
 ```math
 F\leq e^{Ks^2}
 ```
-
+By Chebyshev's Inequality with $e^sZ$ we have
 ```math
 \Pr[e^{sZ}>e^{st}]
 \leq \frac{\mathbb{E}e^{sZ}}{e^{st}}
 \leq e^{Ks^2-st}
 ```
-
+Simplifying and optimizing the exponent for fixed $t$.
 ```math
 s=\frac{t}{2K},
 \qquad
 \text{optimizes the bound}
 ```
-
+And we obtain a bound on the order of,
 ```math
 e^{-Ct^2}
 ```
+Noting this is a extremely strong concentration bound.
 
----
+
+### Proving the inequality,
 
 Now we can try to derive the inequality
 
@@ -109,8 +114,7 @@ e^{sZ}\psi\left(-s(Z-Z'_i)\right)
 \right]
 \end{aligned}
 ```
-Now we are at a cross road, either use this form for a more symmetric bound or modify to get a tighter asymmetric bound.
-The symmetric bound requires more analysis of the $\psi$ function however such does
+Now we are at a cross road, either use this form for a more symmetric bound or modify to get a tighter asymmetric bound. The symmetric bound requires more analysis of the $\psi$ function however for efficiency we will only show the asymmetric one.
 two case \(Z>Z'_i\) and another where \(Z'_i>Z\).
 
 ```math
