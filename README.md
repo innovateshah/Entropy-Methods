@@ -17,9 +17,10 @@ E_i[Z]
 ```
 Then we note a useful idea called the Tensorization of Entropy which can be derived from Han's Inequality (of relative entropy).
 ```math
-\text{Ent}[Z]
-< \sum_i \mathbb{E}\left[\text{Ent}_i[Z]\right]
+\text{Ent}[Y]
+< \sum_i \mathbb{E}\left[\text{Ent}_i[Y]\right]
 ```
+This is the main reason why this technique works. I also conjecture this to be a place to improve/allow for k-wise independence with some additional caveats.
 
 ### Goal
 Our the goal (more or less) is to show a modified log-Sobolev inequality,
