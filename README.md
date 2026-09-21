@@ -109,7 +109,8 @@ e^{sZ}\psi\left(-s(Z-Z'_i)\right)
 \right]
 \end{aligned}
 ```
-
+Now we are at a cross road, either use this form for a more symmetric bound or modify to get a tighter asymmetric bound.
+The symmetric bound requires more analysis of the $\psi$ function however such does
 two case \(Z>Z'_i\) and another where \(Z'_i>Z\).
 
 ```math
@@ -160,12 +161,12 @@ qed.
 
 ### Self bounding functions.
 
-Here we redefine $Z_i'$. Again the impor
+Here we redefine $Z_i'$.
 ```math
 Z_i' = \text{inf}_{X'_i} g(X_1...X_{i-1},X_{i}',X_{i+1}...X_n)
 ```
 
-We call (a,b)-self bounding if the following holds
+First note $Z-Z_i' > 0$. We call (a,b)-self bounding if the following holds
 ```math
 \sum_i Z-Z'_i\leq aZ+b
 ```
