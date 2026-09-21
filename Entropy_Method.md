@@ -64,18 +64,6 @@ The corresponding conditional entropy is
 
 There are two distinct coordinatewise comparison variables.
 
-### Coordinate-deleted comparison: $Z_i$
-
-Choose a measurable function $g_i$ of all variables except $X_i$, and write
-
-```math
-Z_i
-=
- g_i(X_1,\ldots,X_{i-1},X_{i+1},\ldots,X_n).
-```
-
-Thus $Z_i$ is independent of $X_i$. This is the comparison used in the direct logarithmic-Sobolev inequality and in the self-bounding framework.
-
 ### Resampled comparison: $Z_i'$
 
 Let $X_1',\ldots,X_n'$ be an independent copy of $X_1,\ldots,X_n$. Define
@@ -86,7 +74,7 @@ Z_i'
  g(X_1,\ldots,X_{i-1},X_i',X_{i+1},\ldots,X_n).
 ```
 
-This is the comparison used in symmetrization and resampling-sensitivity bounds.
+This is the comparison used in symmetrization and resampling-sensitivity bounds. In some cases we can get away with treating $Z'_i$ as a constant equal to it's inf over $X_i'$.
 
 ---
 
@@ -107,8 +95,6 @@ Tensorization applies to the positive random variable $Y=e^{sZ}$, not directly t
 ---
 
 ## 3. Entropy to the MGF
-
-Define the uncentered MGF
 
 ```math
 F(s)=\mathbb E[e^{sZ}].
@@ -188,7 +174,7 @@ We also note that the assumed inequality need only hold for $s \in [0, t/(2C)]$.
 
 ---
 
-## 4. Coordinatewise logarithmic-Sobolev inequalities
+## 4. Coordinatewise log-Sobolev inequalities
 
 Define
 
@@ -398,7 +384,7 @@ h(u)=(1+u)\log(1+u)-u,
 \qquad u\ge-1.
 ```
 
-Chernoff optimization yields
+Optimization yields
 
 ```math
 \mathbb P(Z\ge\mathbb EZ+t)
