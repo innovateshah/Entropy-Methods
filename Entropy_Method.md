@@ -19,7 +19,7 @@ The central pipeline is
 \Longrightarrow
 \text{MGF bound}
 \Longrightarrow
-\text{Chernoff tail bound}.
+\text{Chernoff-like tail bound}.
 ```
 
 Throughout, assume the needed exponential moments exist for the values of the MGF parameter under consideration.
@@ -149,19 +149,19 @@ Since
 \lim_{s\to0}\frac{\log F(s)}s=\mathbb EZ,
 ```
 
-integration gives
+However WLOG we can shift our choice of $Z$ so $\mathbb EZ = 0$. Thus integration gives
 
 ```math
-\log F(s)\le s\mathbb EZ+Cs^2.
+\log F(s)\le Cs^2.
 ```
 
 Equivalently,
 
 ```math
-\log\mathbb E\bigl[e^{s(Z-\mathbb EZ)}\bigr]\le Cs^2.
+\log\mathbb E\bigl[e^{sZ}\bigr]\le Cs^2.
 ```
 
-Chernoff's bound now yields
+Chebyshev's inequality bound now yields
 
 ```math
 \mathbb P(Z-\mathbb EZ\ge t)
@@ -184,6 +184,7 @@ If the same MGF estimate holds for $-Z$, then
 \le
 2\exp\left(-\frac{t^2}{4C}\right).
 ```
+We also note that the assumed inequality need only hold for $s \in [0, t/(2C)]$. This in theory can be a source of further optimization as depending on the method $C$ changes depending on what interval we desire the inequality to hold.
 
 ---
 
@@ -324,7 +325,7 @@ Hence the entropy-method proof gives
 2\exp\left(-\frac{t^2}{4\sum_i c_i^2}\right).
 ```
 
-This constant is not the sharp McDiarmid constant; it is the constant obtained from this particular entropy-method proof.
+This constant is not always sharp. It is merely the constant obtained from this particular entropy-method proof.
 
 ---
 
