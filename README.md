@@ -8,14 +8,14 @@ Research in Randomized Algorithms
 \end{aligned}
 ```
 
-$$
+```math
 Z = g(X_1,X_2,\dots,X_n), \quad X_i \text{ are indepenet}
-$$
+```
 
-$$
+```math
 E_i[Z]
 = \mathbb{E}\left[Z \mid \text{fix all } X_j,\ j\neq i\right]
-$$
+```
 
 $$
 \operatorname{Ent}[Z]
