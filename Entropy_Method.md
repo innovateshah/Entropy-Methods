@@ -39,7 +39,7 @@ for a measurable real-valued function $g$.
 For a positive random variable $Y$, define the entropy functional
 
 ```math
-\operatorname{Ent}(Y)
+\mathbb{Ent}(Y)
 :=
 \mathbb E[Y\log Y]-(\mathbb EY)\log(\mathbb EY).
 ```
@@ -55,7 +55,7 @@ For each coordinate $i$, let $\mathbb E_i$ denote expectation with respect to $X
 The corresponding conditional entropy is
 
 ```math
-\operatorname{Ent}_i(Y)
+\mathbb{Ent}_i(Y)
 :=
 \mathbb E_i[Y\log Y]
 -
@@ -95,9 +95,9 @@ This is the comparison used in symmetrization and resampling-sensitivity bounds.
 If $Y=f(X_1,\ldots,X_n)>0$, then independence of the coordinates implies
 
 ```math
-\operatorname{Ent}(Y)
+\mathbb{Ent}(Y)
 \le
-\sum_{i=1}^n\mathbb E\bigl[\operatorname{Ent}_i(Y)\bigr].
+\sum_{i=1}^n\mathbb E\bigl[\mathbb{Ent}_i(Y)\bigr].
 ```
 
 This is the tensorization inequality. In the discrete setting, it follows from Han's inequality for relative entropy. Conceptually, it replaces the product factorization of moment generating functions available for sums of independent random variables.
@@ -117,7 +117,7 @@ F(s)=\mathbb E[e^{sZ}].
 Then
 
 ```math
-\operatorname{Ent}(e^{sZ})
+\mathbb{Ent}(e^{sZ})
 =
 s\,\mathbb E[Ze^{sZ}]
 -
@@ -129,7 +129,7 @@ sF'(s)-F(s)\log F(s).
 Therefore, a bound of the form
 
 ```math
-\operatorname{Ent}(e^{sZ})
+\mathbb{Ent}(e^{sZ})
 \le
 Cs^2F(s)
 ```
@@ -198,7 +198,7 @@ Define
 For a coordinate-deleted comparison $Z_i$, tensorization plus a one-coordinate entropy estimate yields
 
 ```math
-\operatorname{Ent}(e^{sZ})
+\mathbb{Ent}(e^{sZ})
 \le
 \sum_{i=1}^n
 \mathbb E\left[
@@ -209,7 +209,7 @@ For a coordinate-deleted comparison $Z_i$, tensorization plus a one-coordinate e
 A useful resampled version is
 
 ```math
-\operatorname{Ent}(e^{sZ})
+\mathbb{Ent}(e^{sZ})
 \le
 \sum_{i=1}^n
 \mathbb E\left[
@@ -234,7 +234,7 @@ Using exchangeability of $X_i$ and $X_i'$, together with
 one obtains the directional forms
 
 ```math
-\operatorname{Ent}(e^{sZ})
+\mathbb{Ent}(e^{sZ})
 \le
 \sum_{i=1}^n
 \mathbb E\left[
@@ -246,7 +246,7 @@ one obtains the directional forms
 and
 
 ```math
-\operatorname{Ent}(e^{sZ})
+\mathbb{Ent}(e^{sZ})
 \le
 \sum_{i=1}^n
 \mathbb E\left[
@@ -279,7 +279,7 @@ the upper-direction inequality gives
 
 ```math
 \begin{aligned}
-\operatorname{Ent}(e^{sZ})
+\mathbb{Ent}(e^{sZ})
 &\le
 s^2\mathbb E\left[
  e^{sZ}
@@ -373,7 +373,7 @@ Therefore,
 
 ```math
 \begin{aligned}
-\operatorname{Ent}(e^{sZ})
+\mathbb{Ent}(e^{sZ})
 &\le
 \psi(-s)\mathbb E\left[e^{sZ}\sum_{i=1}^n(Z-Z_i)\right] \\
 &\le
