@@ -158,11 +158,19 @@ s^2\mathbb{E}[e^{sF}]
 
 qed.
 
-### Self bounding functions \((a,b)\)
+### Self bounding functions.
 
+Here we redefine $Z_i'$. Again the impor
+```math
+Z_i' = \text{inf}_{X'_i} g(X_1...X_{i-1},X_{i}',X_{i+1}...X_n)
+```
+
+We call (a,b)-self bounding if the following holds
 ```math
 \sum_i Z-Z'_i\leq aZ+b
 ```
+
+Then we can say
 
 ```math
 \Pr[>t]
