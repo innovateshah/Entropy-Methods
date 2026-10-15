@@ -7,6 +7,7 @@ Will something like the above hold under just t-wise independence for large enou
 
 A possible route (via entropy method) would be proving an alteration to tensorization of entropy that only requires t-wise independence. For instance instead of fixing all but $X_i$ you iterate over all t-sized pairs and fix that. Alternatively we could think of t-wise independence as a map from some (less in quantity) truly independent r.v.'s to some n t-wise independent variables.
 
+Some stuff similar to what we would start with on with han's lemma: https://arxiv.org/pdf/2610.18693
 
 ## 2. The concentration inequality for Lipschitz functions
 
